@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream House!</title>
+    <style>
+        body{
+            background: #F7ECDE;
+            max-width: 800px; 
+            margin: auto;
+            text-align: center;
+            font-family: cursive;
+        }
+        h1{
+            text-align: center;
+            color:#272044 ;
+            font-size: 48px;
+            font-weight: bolder;
+        }
+        h2{
+            text-align: center;
+            line-height: 100px;
+            font-size: 28px;
+            background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
+            color: #272044;
+            padding: 20px auto;
+            border-radius: 10px;
+            margin: 10px auto;           
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        p{
+            text-align: center;
+            line-height: 1.5;
+            font-size: 18px;
+        }
+        button{
+            display: block;
+            margin: 20px auto;
+            background:#272044;
+            color:#F0FBF4 ;
+            font-size: 24px;
+            padding: 15px 30px;
+            line-height:50px 200px 50px 200px ;
+            border-radius: 10px;
+            border: none;
+            transition: all 200ms ease-in-out;
+            box-shadow: 5px 5px 2px 1px rgba(184, 184, 247, 0.2);
+        }
+        button:hover{
+            background:#F0FBF4 ;
+            color: #272044;
+            cursor: grab;
+        }
+
+        .footer{
+            text-align: center;
+            display: block;
+            font-size: 12px;
+        }
+        .mail-address{
+            text-decoration: underline;
+            color: #272044;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interior Design</h1>
+    <h2>Build Your Dream House!</h2>
+    <hr>
+    <img src="https://interiordesign.net/wp-content/uploads/2022/07/Interior-Design-Dufner-Heighes-Pelham-New-York-Kitchen-Design-21_9_20_Pelham2251-w3-1024x673.jpg" alt="Interior Design" >
+    <hr>
+    <p>Interior design is the art and science of enhancing the interior of a building to achieve a healthier and more
+    aesthetically pleasing environment for the people using the space. An interior designer is someone who plans,
+    researches, coordinates, and manages such enhancement projects. If you are a beginner, you can take our courses to become an independant designer 
+    and if you are a professional designer, join our community and share us your spectacular ideas.</p>
+    Learn more in
+    <a href="https://interiordesign.net/" target="blank"> interiordesign.net</a>
+    <button>Join Us</button>
+    <div class="footer">This page was built by <strong>Maedeh Mojahed</strong> <div class="mail-address"> 📧 maedeh.mojahed@gmail.com</div></div> 
+    <script>
+        function joinUs() {
+            let name = prompt("What is your name?");
+            alert("Thank you " + name + " for joining us ❣ ")
+            let level = prompt("Are you a beginner or a professional?");
+            let h1 = document.querySelector("h1");
+            level= level.toLowerCase();
+            if (level === "beginner") {
+                h1.innerHTML= "Welcome " + name + ", Enjoy our courses!";
+            } else {
+                h1.innerHTML = "Welcome " + name + ", Nice to have you with us!";
+            }
+        }
+        let joinButton= document.querySelector("button");
+        joinButton.addEventListener("click", joinUs)
+    </script>
+</body>
+</html>
